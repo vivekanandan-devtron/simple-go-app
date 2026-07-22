@@ -1,5 +1,5 @@
 # Stage 1: Build the binary
-FROM golang:1.22-alpine AS builder
+FROM golang:1.26-alpine AS builder
 WORKDIR /app
 COPY go.mod ./
 # COPY go.sum ./ # Uncomment if you have external dependencies
