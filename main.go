@@ -30,6 +30,11 @@ func runHelloWorldExitNormally() {
 	os.Exit(0)
 }
 
+func failAlways() {
+	fmt.Println("always failing")
+	os.Exit(1)
+}
+
 func main() {
 
 	jobType := os.Getenv("JOB_TYPE")
@@ -39,6 +44,8 @@ func main() {
 		runHelloWorldExitNormally()
 	case "random":
 		failRandomly()
+	case "alwaysFail":
+		failAlways()
 	default:
 		fmt.Println("Unknown job type!")
 		os.Exit(1)
