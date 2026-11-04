@@ -9,7 +9,7 @@ import (
 
 func failRandomly() {
 	fmt.Println("started...")
-
+	fmt.Println("branch-2")
 	rng := rand.New(rand.NewSource(time.Now().UnixNano()))
 
 	// Generate a random float between 0.0 and 1.0
